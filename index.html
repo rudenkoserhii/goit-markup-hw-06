@@ -64,6 +64,30 @@
           </button>
           <div data-modal class="backdrop is-hidden">
             <div class="modal">
+              <form class="modal-form">
+                <p>Оставьте свои данные, мы вам перезвоним</p>
+                <label for="user-name">Имя</label>
+                <input
+                  type="text"
+                  name="user-name"
+                  class="modal-input"
+                  placeholder=""
+                />
+                <label for="user-phone">Телефон</label>
+                <input type="phone" name="user-phone" class="modal-input" />
+                <label for="user-email">Почта</label>
+                <input type="email" name="user-email" class="modal-input" />
+                <label for="user-comment">Комментарий</label>
+                <input
+                  type="textaria"
+                  name="user-comment"
+                  class="modal-input"
+                  placeholder="Введите текст"
+                />
+                <label for="user-oferta"></label>
+                <input type="checkbox" name="user-oferta" class="modal-input" />
+                <button class="modal-submit" type="submit"></button>
+              </form>
               <button data-modal-close class="hero-btn-close">
                 <svg class="modal-bt-close" width="30" height="30">
                   <use href="./images/sprite.svg#icon-close"></use>
@@ -409,7 +433,7 @@
     </main>
     <footer class="footer">
       <div class="container footer-container">
-        <div>
+        <div class="footer-contacts">
           <a class="logo" href="./index.html"
             >Web<span class="logo logo-white">Studio</span></a
           >
@@ -493,6 +517,29 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="footer-signup-block">
+          <h3 class="footer-signup-title">Подпишитесь на рассылку</h3>
+          <form class="footer-signup">
+            <label for="user_email"></label>
+            <input
+              class="footer-user-signup"
+              type="email"
+              name="email"
+              id="user_email"
+              placeholder="E-mail"
+            />
+            <button class="button-signup" type="submit">
+              Подписаться
+              <svg
+                class="footer-social-icon social-icon"
+                width="24"
+                height="24"
+              >
+                <use href="./images/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
         </div>
       </div>
     </footer>
