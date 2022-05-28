@@ -375,11 +375,14 @@ li > .header-contact {
 .modal-input.comment {
   height: 120px;
   padding: 12px 16px;
+  display: inline-flex;
+  resize: none;
 }
 
-/* .modal-input.comment::placeholder {
+.modal-input.comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
-} */
+  text-align: left;
+}
 
 .modal-input:hover,
 .modal-input:focus,
