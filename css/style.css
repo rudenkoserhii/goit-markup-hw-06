@@ -911,6 +911,10 @@ address {
   background-color: var(--tx-blue-cl);
 }
 
+.button-signup:hover {
+  cursor: pointer;
+}
+
 /* portfolio */
 
 .portfolio {
