@@ -64,6 +64,11 @@
           </button>
           <div data-modal class="backdrop is-hidden">
             <div class="modal">
+              <button data-modal-close class="hero-btn-close" type="submit">
+                <svg class="modal-bt-close" width="11" height="11">
+                  <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
               <form class="modal-form">
                 <p class="modal-form-title">
                   Оставьте свои данные, мы вам перезвоним
@@ -117,35 +122,24 @@
                   >
                   </textarea>
                 </div>
-                <div class="user-name-block checkbox">
+                <label class="modal-checkbox">
                   <input
                     type="checkbox"
                     name="user-oferta"
                     class="modal-input checkbox"
-                    id="user-oferta"
                   />
-                  <svg class="modal-icon checkbox" width="16" height="15">
-                    <use href="./images/sprite.svg#icon-check"></use>
-                  </svg>
-                  <svg
-                    class="modal-icon checkbox active"
-                    width="16"
-                    height="15"
-                  >
-                    <use href="./images/sprite.svg#icon-check-active"></use>
-                  </svg>
-                  <label class="modal-label checkbox" for="user-oferta"
+                  <span class="custom-checkbox">
+                    <svg class="icon-custom-checkbox" width="11" height="8">
+                      <use href="./images/sprite.svg#icon-checkin"></use>
+                    </svg>
+                  </span>
+                  <span class="modal-label checkbox"
                     >Соглашаюсь с рассылкой и принимаю
-                    <a href="">Условия договора</a></label
-                  >
-                </div>
+                    <a href="">Условия договора</a>
+                  </span>
+                </label>
                 <button class="modal-submit" type="submit">Отправить</button>
               </form>
-              <button data-modal-close class="hero-btn-close" type="submit">
-                <svg class="modal-bt-close" width="11" height="11">
-                  <use href="./images/sprite.svg#icon-close"></use>
-                </svg>
-              </button>
             </div>
           </div>
         </div>

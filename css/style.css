@@ -329,21 +329,13 @@ li > .header-contact {
 }
 
 .modal-input.checkbox {
-  width: 16px;
-  height: 15px;
-
-  margin-right: 8px;
-
-  z-index: 100;
-
   opacity: 0;
-}
 
-.modal-input.checkbox:checked ~ .modal-icon.checkbox {
-  opacity: 0;
-}
-.modal-input.checkbox:checked ~ .modal-icon.checkbox.active {
-  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  z-index: -1;
 }
 
 .modal-label.checkbox > a {
@@ -359,7 +351,6 @@ li > .header-contact {
 .modal-input {
   width: 448px;
   height: 40px;
-  margin-bottom: 12px;
   padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -368,8 +359,27 @@ li > .header-contact {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-input:last-child {
+.modal-input.checkbox:focus ~ .custom-checkbox,
+.modal-input.checkbox:hover ~ .custom-checkbox {
+  outline-color: var(--tx-blue-cl);
+}
+
+.modal-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  position: relative;
+}
+
+.user-name-block.comment {
   margin-bottom: 20px;
+}
+
+.user-name-block.checkbox {
+  margin-bottom: 30px;
 }
 
 .modal-input.comment {
@@ -402,6 +412,8 @@ li > .header-contact {
   display: flex;
   flex-direction: column;
 
+  margin-bottom: 10px;
+
   position: relative;
 }
 
@@ -430,15 +442,26 @@ li > .header-contact {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-icon.checkbox {
-  top: 5px;
-  left: 0;
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  outline: 2px solid var(--tx-sec-cl);
+  border-radius: 4px;
+  outline-offset: -2px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    outline-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-icon.checkbox.active {
-  opacity: 0;
+.modal-input.checkbox:checked ~ .custom-checkbox {
+  background-color: var(--tx-blue-cl);
+  outline-color: var(--tx-blue-cl);
 }
 
 .modal-submit {
@@ -448,7 +471,6 @@ li > .header-contact {
   border-radius: 4px;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-top: 30px;
   border: 0;
 
   font-weight: 700;
@@ -763,7 +785,15 @@ li > .header-contact {
 .footer-container {
   display: flex;
   align-items: baseline;
-  gap: 70px;
+  justify-content: center;
+}
+
+.footer-contacts {
+  margin-right: 70px;
+}
+
+.footer-social-block {
+  margin-right: auto;
 }
 
 .footer-container > div > .logo {
@@ -831,7 +861,6 @@ address {
 .footer-signup-block {
   width: 570px;
   height: 86px;
-  margin-left: 93px;
 }
 
 .footer-signup {
