@@ -364,6 +364,8 @@ li > .header-contact {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:last-child {
@@ -375,18 +377,23 @@ li > .header-contact {
   padding: 12px 16px;
 }
 
-.modal-input.comment::placeholder {
+/* .modal-input.comment::placeholder {
   color: rgba(117, 117, 117, 0.5);
-}
+} */
 
 .modal-input:hover,
 .modal-input:focus,
+.modal-input:active,
 .modal-input.comment:hover,
-.modal-input.comment:focus {
+.modal-input.comment:focus .modal-input.comment:active {
   cursor: pointer;
+  border-color: var(--tx-blue-cl);
+  outline: 0;
 }
 
-.modal-input:hover ~ .modal-icon {
+.modal-input:hover ~ .modal-icon,
+.modal-input:focus ~ .modal-icon,
+.modal-input:active ~ .modal-icon {
   fill: var(--tx-blue-cl);
 }
 
@@ -419,7 +426,7 @@ li > .header-contact {
   top: 29px;
   left: 12px;
 
-  transition: fill 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-icon.checkbox {
